@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #ff4500;
+    padding-bottom: 10px;
+}
+
+h1, h2, h3 {
+    color: #ff4500; /* Оранжевый акцент, как в 1win */
+}
+
+.promo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.promo-code {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#code {
+    background: #ff4500;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.register-btn {
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #e63900;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    background: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+}
+
+/* Responsive для мобильных */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
