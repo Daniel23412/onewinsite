@@ -1,100 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Тёмно-синий градиент */
-    /* Если хочешь просто однотонный синий — замени строку выше на: */
-    /* background-color: #0d1b2a; */
-    color: #ffffff; /* Все тексты белые */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background: #0f0f17; color: #e0e0e0; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: 700; color: #00ff88; }
+nav a { color: #e0e0e0; text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
+nav a:hover { color: #00ff88; }
+
+main { margin-top: 90px; padding: 40px 0; }
+h1 { font-size: 42px; text-align: center; margin-bottom: 20px; color: #00ff88; }
+.subtitle { text-align: center; font-size: 20px; margin-bottom: 50px; color: #aaa; }
+
+.bonus-banner {
+    background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 50px; font-size: 24px; font-weight: 700;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.cta-button {
+    display: block;
+    width: 350px;
+    margin: 30px auto;
     padding: 20px;
-}
-
-header {
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
     text-align: center;
-    border-bottom: 2px solid #00bfff; /* Голубой акцент вместо оранжевого */
-    padding-bottom: 10px;
-}
-
-h1, h2, h3 {
-    color: #00d4ff; /* Ярко-голубой для заголовков */
-}
-
-h1 {
-    font-size: 2.2em;
-}
-
-.promo {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.promo-code {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    text-decoration: none;
     border-radius: 12px;
-    margin: 25px 0;
-    border: 1px solid #00bfff;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+.cta-button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0,255,136,0.8); }
 
-#code {
-    background: #00d4ff;
-    color: #000;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    display: inline-block;
-}
+.top-slots { background: #1a1a2e; border-radius: 15px; padding: 30px; margin-bottom: 50px; }
+.top-slots h2 { text-align: center; margin-bottom: 30px; font-size: 32px; color: #00ff88; }
+.slots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.slot-card { background: #16213e; border-radius: 12px; padding: 20px; text-align: center; transition: transform 0.3s; }
+.slot-card:hover { transform: translateY(-10px); }
+.slot-card h3 { color: #00ff88; margin-bottom: 10px; }
 
-.register-btn {
-    background: #00d4ff;
-    color: #000;
-    border: none;
-    padding: 18px 40px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-top: 20px;
-}
+.article { background: #1a1a2e; border-radius: 15px; padding: 40px; margin-bottom: 40px; }
+.article h2 { font-size: 36px; color: #00ff88; margin-bottom: 20px; text-align: center; }
+.article h3 { font-size: 26px; color: #00ff88; margin: 30px 0 15px; }
+.article p { font-size: 18px; margin-bottom: 20px; }
+.article ul { padding-left: 30px; margin-bottom: 20px; }
+.article li { margin-bottom: 12px; font-size: 17px; }
+.strategy-box { background: #16213e; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #00ff88; }
 
-.register-btn:hover {
-    background: #00ffea;
-    transform: scale(1.05);
-}
+.games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+.game-card { background: #16213e; border-radius: 15px; padding: 30px; text-align: center; }
+.game-card h3 { font-size: 28px; color: #00ff88; margin-bottom: 15px; }
+.game-card a { display: inline-block; margin-top: 15px; padding: 12px 24px; background: #00ff88; color: #000; text-decoration: none; border-radius: 8px; font-weight: 700; }
+.game-card a:hover { background: #00cc66; }
 
-.features ul {
-    list-style: none;
-    padding: 0;
-}
-
-.features li {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 12px 0;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #00bfff;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    color: #aaaaaa;
-    font-size: 14px;
-}
-
-/* Мобильная адаптация */
-@media (max-width: 600px) {
-    .container { padding: 15px; }
-    h1 { font-size: 1.8em; }
-    .register-btn { width: 100%; padding: 18px; }
-}
+footer { background: #0a0a10; padding: 30px 0; text-align: center; margin-top: 50px; font-size: 14px; color: #666; }
