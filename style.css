@@ -2,56 +2,49 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Roboto', sans-serif; background: #0f0f17; color: #e0e0e0; line-height: 1.6; }
-header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 28px; font-weight: 700; color: #00ff88; }
-nav a { color: #e0e0e0; text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
+.logo { font-size: 32px; font-weight: 700; color: #00ff88; }
+nav a { color: #e0e0e0; text-decoration: none; margin-left: 40px; font-weight: 500; font-size: 18px; transition: color 0.3s; }
 nav a:hover { color: #00ff88; }
 
-main { margin-top: 90px; padding: 40px 0; }
-h1 { font-size: 42px; text-align: center; margin-bottom: 20px; color: #00ff88; }
-.subtitle { text-align: center; font-size: 20px; margin-bottom: 50px; color: #aaa; }
+main { margin-top: 100px; padding: 40px 0; }
+h1 { font-size: 42px; text-align: center; margin-bottom: 30px; color: #00ff88; }
+.subtitle { text-align: center; font-size: 22px; margin-bottom: 50px; color: #aaa; }
 
 .bonus-banner {
-    background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 50px; font-size: 24px; font-weight: 700;
+    background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; padding: 35px; border-radius: 15px; text-align: center; margin: 0 auto 50px; max-width: 900px; font-size: 26px; font-weight: 700;
 }
 
 .cta-button {
     display: block;
-    width: 350px;
-    margin: 30px auto;
-    padding: 20px;
+    width: 400px;
+    margin: 40px auto;
+    padding: 22px;
     background: linear-gradient(135deg, #00ff88, #00cc66);
     color: #000;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
 }
 .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0,255,136,0.8); }
 
-.top-slots { background: #1a1a2e; border-radius: 15px; padding: 30px; margin-bottom: 50px; }
-.top-slots h2 { text-align: center; margin-bottom: 30px; font-size: 32px; color: #00ff88; }
-.slots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.slot-card { background: #16213e; border-radius: 12px; padding: 20px; text-align: center; transition: transform 0.3s; }
+.article { background: #1a1a2e; border-radius: 15px; padding: 40px; margin: 0 auto 50px; max-width: 1000px; }
+.article h2 { font-size: 36px; color: #00ff88; margin-bottom: 30px; text-align: center; }
+.article h3 { font-size: 28px; color: #00ff88; margin: 40px 0 20px; }
+.strategy-box { background: #16213e; padding: 25px; border-radius: 10px; margin: 25px 0; border-left: 6px solid #00ff88; }
+.strategy-box p { font-size: 18px; margin-bottom: 15px; }
+
+.game-image { display: block; max-width: 100%; height: auto; border-radius: 15px; margin: 30px auto; box-shadow: 0 0 20px rgba(0,255,136,0.3); }
+
+.top-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.slot-card { background: #16213e; border-radius: 15px; padding: 25px; text-align: center; transition: transform 0.3s; }
 .slot-card:hover { transform: translateY(-10px); }
-.slot-card h3 { color: #00ff88; margin-bottom: 10px; }
+.slot-card img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
+.slot-card h3 { color: #00ff88; font-size: 24px; margin-bottom: 10px; }
 
-.article { background: #1a1a2e; border-radius: 15px; padding: 40px; margin-bottom: 40px; }
-.article h2 { font-size: 36px; color: #00ff88; margin-bottom: 20px; text-align: center; }
-.article h3 { font-size: 26px; color: #00ff88; margin: 30px 0 15px; }
-.article p { font-size: 18px; margin-bottom: 20px; }
-.article ul { padding-left: 30px; margin-bottom: 20px; }
-.article li { margin-bottom: 12px; font-size: 17px; }
-.strategy-box { background: #16213e; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #00ff88; }
-
-.games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
-.game-card { background: #16213e; border-radius: 15px; padding: 30px; text-align: center; }
-.game-card h3 { font-size: 28px; color: #00ff88; margin-bottom: 15px; }
-.game-card a { display: inline-block; margin-top: 15px; padding: 12px 24px; background: #00ff88; color: #000; text-decoration: none; border-radius: 8px; font-weight: 700; }
-.game-card a:hover { background: #00cc66; }
-
-footer { background: #0a0a10; padding: 30px 0; text-align: center; margin-top: 50px; font-size: 14px; color: #666; }
+footer { background: #0a0a10; padding: 30px 0; text-align: center; font-size: 14px; color: #666; margin-top: 50px; }
