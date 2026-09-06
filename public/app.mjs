@@ -1,5 +1,6 @@
 import {games} from './games.mjs';
 import {languages,detectLanguage,t} from './i18n.mjs';
+import {imageData} from './images.mjs';
 
 const pageQuery=new URLSearchParams(location.search);
 let savedLanguage=null;
@@ -10,6 +11,8 @@ let paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let cycle=0;
 let toastTimer;
 const select=document.querySelector('#language');
+const cover=id=>imageData[id]??`assets/${id}.jpg`;
+document.querySelector('#featured-cover').src=cover('falling-pixage');
 for(const [code,label] of languages){const option=document.createElement('option');option.value=code;option.textContent=label;select.append(option)}
 
 function gameUrl(id){
@@ -24,7 +27,7 @@ function renderGames(){
   for(const game of games.slice(1)){
     const a=document.createElement('a');a.className='game-card';a.dataset.game=game.id;
     const picture=document.createElement('div');picture.className='game-image';
-    const img=document.createElement('img');img.src=`assets/${game.id}.jpg`;img.alt=game.name;img.loading='lazy';img.decoding='async';img.width=300;img.height=300;
+    const img=document.createElement('img');img.src=cover(game.id);img.alt=game.name;img.loading='lazy';img.decoding='async';img.width=300;img.height=300;
     picture.append(img);
     const info=document.createElement('div');info.className='game-info';
     const details=document.createElement('div');
@@ -39,7 +42,7 @@ function renderDemo(){
   for(let i=0;i<3;i++){
     const game=games[(cycle+i*4)%games.length];
     const row=document.createElement('div');row.className='demo-item';row.setAttribute('role','listitem');
-    const img=document.createElement('img');img.src=`assets/${game.id}.jpg`;img.width=38;img.height=38;img.alt='';img.loading='lazy';
+    const img=document.createElement('img');img.src=cover(game.id);img.width=38;img.height=38;img.alt='';img.loading='lazy';
     const detail=document.createElement('div');detail.className='demo-detail';
     const player=document.createElement('p');player.className='demo-player';player.textContent=`${t(language,'demoPlayer')} ${String(((cycle*3+i)%99)+1).padStart(2,'0')}`;
     const title=document.createElement('p');title.textContent=game.name;detail.append(player,title);
