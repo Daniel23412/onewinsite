@@ -4,7 +4,7 @@ import {imageData} from './images.mjs';
 
 const pageQuery=new URLSearchParams(location.search);
 let savedLanguage=null;
-try{savedLanguage=localStorage.getItem('pixelclub.language')}catch{}
+try{savedLanguage=localStorage.getItem('noirlounge.language')}catch{}
 let language=detectLanguage(navigator.languages?.length?navigator.languages:[navigator.language],savedLanguage,pageQuery.get('lang'));
 let config={affiliateUrl:'https://lknw.cc/d830cc81',promoCode:'205bonus',showDemoFeed:true};
 let paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -16,7 +16,7 @@ document.querySelector('#featured-cover').src=cover('falling-pixage');
 for(const [code,label] of languages){const option=document.createElement('option');option.value=code;option.textContent=label;select.append(option)}
 
 function gameUrl(id){
-  const query=new URLSearchParams({game:id,lang:language});
+  const query=new URLSearchParams({game:id,lang:language,utm_source:'noirlounge'});
   for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']) {
     const value=pageQuery.get(key);if(value) query.set(key,value.slice(0,120));
   }
@@ -63,7 +63,7 @@ function renderLanguage(){
 function toast(message){const el=document.querySelector('#toast');clearTimeout(toastTimer);el.textContent=message;el.hidden=false;toastTimer=setTimeout(()=>{el.hidden=true},3500)}
 select.addEventListener('change',()=>{
   language=select.value;
-  try{localStorage.setItem('pixelclub.language',language)}catch{}
+  try{localStorage.setItem('noirlounge.language',language)}catch{}
   // Replace a shared ?lang= override too, so reloading keeps the chosen language.
   const url=new URL(location.href);url.searchParams.set('lang',language);
   try{history.replaceState(null,'',url)}catch{}
