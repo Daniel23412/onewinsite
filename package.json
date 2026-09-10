@@ -1,9 +1,11 @@
 {
-  "name": "pixage-portal",
+  "name": "voltpix",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "node --env-file-if-exists=.env scripts/serve.mjs",
     "dev": "node --env-file-if-exists=.env --watch scripts/serve.mjs",
